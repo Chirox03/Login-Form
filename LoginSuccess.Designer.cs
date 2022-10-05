@@ -28,12 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.logsucText = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // logsucText
+            // 
+            this.logsucText.AutoSize = true;
+            this.logsucText.Font = new System.Drawing.Font("Showcard Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.logsucText.Location = new System.Drawing.Point(187, 55);
+            this.logsucText.Name = "logsucText";
+            this.logsucText.Size = new System.Drawing.Size(317, 37);
+            this.logsucText.TabIndex = 0;
+            this.logsucText.Text = "Login Successful!";
+            // 
+            // LoginSuccess
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(667, 152);
+            this.Controls.Add(this.logsucText);
+            this.Name = "LoginSuccess";
             this.Text = "LoginSuccess";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private Label logsucText;
     }
 }
