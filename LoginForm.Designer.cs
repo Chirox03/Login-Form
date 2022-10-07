@@ -34,6 +34,7 @@
             this.usrBox = new System.Windows.Forms.TextBox();
             this.passBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.signupLabel = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label2
@@ -67,6 +68,7 @@
             this.passBox.Name = "passBox";
             this.passBox.Size = new System.Drawing.Size(144, 27);
             this.passBox.TabIndex = 4;
+            this.passBox.UseSystemPasswordChar = true;
             // 
             // loginButton
             // 
@@ -78,11 +80,23 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // signupLabel
+            // 
+            this.signupLabel.AutoSize = true;
+            this.signupLabel.Location = new System.Drawing.Point(290, 319);
+            this.signupLabel.Name = "signupLabel";
+            this.signupLabel.Size = new System.Drawing.Size(221, 20);
+            this.signupLabel.TabIndex = 6;
+            this.signupLabel.TabStop = true;
+            this.signupLabel.Text = "Don\'t have an account? Sign up!";
+            this.signupLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.signupLabel_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.signupLabel);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passBox);
             this.Controls.Add(this.usrBox);
@@ -103,5 +117,6 @@
         private TextBox usrBox;
         private TextBox passBox;
         private Button loginButton;
+        private LinkLabel signupLabel;
     }
 }

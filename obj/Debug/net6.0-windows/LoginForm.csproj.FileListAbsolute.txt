@@ -41,3 +41,4 @@ F:\Code\C#\LoginForm\obj\Debug\net6.0-windows\LoginForm.pdb
 F:\Code\C#\LoginForm\obj\Debug\net6.0-windows\LoginForm.genruntimeconfig.cache
 F:\Code\C#\LoginForm\obj\Debug\net6.0-windows\ref\LoginForm.dll
 F:\Code\C#\LoginForm\obj\Debug\net6.0-windows\LoginForm.Properties.Resources.resources
+F:\Code\C#\LoginForm\obj\Debug\net6.0-windows\LoginForm.SignupForm.resources

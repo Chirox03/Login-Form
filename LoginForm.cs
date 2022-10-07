@@ -40,5 +40,13 @@ namespace LoginForm
             }
             conn.Close();
         }
+
+        private void signupLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            SignupForm form = new SignupForm();
+            form.ShowDialog();
+
+        }
     }
 }

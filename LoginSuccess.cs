@@ -25,7 +25,7 @@ namespace LoginForm
         {
             LoginForm newLogin = new LoginForm();
             this.Close();
-            newLogin.Show();
+            newLogin.ShowDialog();
 
         }
     }
