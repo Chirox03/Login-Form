@@ -16,5 +16,17 @@ namespace LoginForm
         {
             InitializeComponent();
         }
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+         Application.Exit();
+        }
+
+        private void signoutButton_Click(object sender, EventArgs e)
+        {
+            LoginForm newLogin = new LoginForm();
+            this.Close();
+            newLogin.Show();
+
+        }
     }
 }

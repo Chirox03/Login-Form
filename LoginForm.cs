@@ -30,7 +30,9 @@ namespace LoginForm
             if(tmp.Read())
             {
                 this.Hide();
-                MessageBox.Show("Meomeomeo!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                LoginSuccess successForm = new LoginSuccess();
+                successForm.Show();
+               // this.Close();
 
             }else
             {
