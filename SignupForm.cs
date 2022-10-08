@@ -34,12 +34,38 @@ namespace LoginForm
                 MessageBox.Show("Password doesn't match! Please retype password!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            if(passBox.Text=="" || usrBox.Text=="" || repassBox.Text=="" )
+            {
+                MessageBox.Show("Invalid value!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             username = usrBox.Text;
             password = passBox.Text;
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-U8O149S;Encrypt=False;Initial Catalog=Login_demo;Integrated Security=True");
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT into LOGIN_NEW(USERNAME,PASSWORD) VALUES ('" + username + "','"+ password + "')",conn);
+            SqlCommand cmd = new SqlCommand("select * from login_new where username= '" + username +"'", conn);
             SqlDataReader tmp = cmd.ExecuteReader();
+            if (tmp.Read())
+            {
+                MessageBox.Show("Existed username! Please choose another!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            tmp.Close();
+            cmd = new SqlCommand("INSERT into LOGIN_NEW(USERNAME,PASSWORD) VALUES ('" + username + "','"+ password + "')",conn);
+            var tt = cmd.ExecuteNonQuery();
+            MessageBox.Show("Success sign up! Please sign in to use the service!", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoginForm frm = new LoginForm();
+            this.Hide();
+            frm.Show();
+            conn.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm frm = new LoginForm();
+            this.Hide();
+            frm.ShowDialog();
         }
     }
 }
