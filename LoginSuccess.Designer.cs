@@ -37,7 +37,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(420, 309);
+            this.exitButton.Location = new System.Drawing.Point(420, 354);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(149, 68);
             this.exitButton.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             // signoutButton
             // 
-            this.signoutButton.Location = new System.Drawing.Point(197, 307);
+            this.signoutButton.Location = new System.Drawing.Point(197, 353);
             this.signoutButton.Name = "signoutButton";
             this.signoutButton.Size = new System.Drawing.Size(165, 70);
             this.signoutButton.TabIndex = 1;
@@ -60,7 +60,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(197, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(372, 264);
+            this.pictureBox1.Size = new System.Drawing.Size(372, 299);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -69,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 431);
+            this.ClientSize = new System.Drawing.Size(733, 495);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.signoutButton);
             this.Controls.Add(this.exitButton);

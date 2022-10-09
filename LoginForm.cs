@@ -23,7 +23,7 @@ namespace LoginForm
                 return;
             }
 
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-U8O149S;Encrypt=False;Initial Catalog=Login_demo;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=10.0.141.4,1433;Encrypt=False;Initial Catalog=Login_demo;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand("select * from login_new where username= '" + username + "'and password='" + password + "'", conn);
             SqlDataReader tmp = cmd.ExecuteReader();
